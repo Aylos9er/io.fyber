@@ -1,0 +1,12 @@
+
+import asyncio
+class IoFyber:
+    def __init__(self, name):
+        self.name = name
+    async def execute(self):
+        print(f"Executing IO.Fyber task: {self.name}")
+        await asyncio.sleep(1)  # Simulate an I/O operation
+        print(f"Completed IO.Fyber task: {self.name}")
+async def main():
+    tasks = [IoFyber(f"Task {i}") for i in range(1, 4)]
+    await asyncio.gather
